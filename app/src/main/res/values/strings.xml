@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">HappyPet</string>
+    <string name="welcome_veterinarian">Welcome Veterinarian</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="vet_login">LOGIN</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account, REGISTER</string>
+    <string name="vet_logo">vet logo</string>
 </resources>

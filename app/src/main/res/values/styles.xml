@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">#000</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <color name="colorPrimary">#5FB6FC</color>
+    <color name="colorPrimaryDark">#FFC107</color>
+    <color name="colorAccent">#009688</color>
+</resources>

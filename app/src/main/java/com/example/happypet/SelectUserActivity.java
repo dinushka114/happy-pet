@@ -1,13 +1,14 @@
 package com.example.happypet;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
-public class VetLoginActivity extends AppCompatActivity {
+public class SelectUserActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vet_login);
+        setContentView(R.layout.activity_select_user);
     }
 }

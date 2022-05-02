@@ -7,6 +7,9 @@
         <entry key="..\:/happy-pet/app/src/main/res/drawable/ic__mail.xml" value="0.2445" />
         <entry key="..\:/happy-pet/app/src/main/res/layout/Activity_Vet_Login.xml" value="0.264" />
         <entry key="..\:/happy-pet/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_select_user.xml" value="0.31145833333333334" />
+        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
+        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_register.xml" value="0.31145833333333334" />
       </map>
     </option>
   </component>

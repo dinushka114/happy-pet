@@ -7,4 +7,10 @@
     <string name="don_t_have_an_account_register">Don\'t have an account, REGISTER</string>
     <string name="vet_logo">vet logo</string>
     <string name="it_s_all_about_our_beloved_pets">It\'s all about our beloved pets</string>
+    <string name="driver">Driver</string>
+    <string name="pharmacist">Pharmacist</string>
+    <string name="veterinarian">Veterinarian</string>
+    <string name="pet_owner">Pet Owner</string>
+    <string name="what_best_describes_you">What best describes you?</string>
+    <string name="hello_welcome_to_this_application">Hello, welcome to this application</string>
 </resources>

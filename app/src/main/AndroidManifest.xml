@@ -10,11 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyPet">
         <activity
-            android:name=".VetDashboardActivity"
+
+            android:name=".drivermanager.RegisterDriver"
             android:exported="false" />
         <activity
             android:name=".SelectUserActivity"
             android:exported="false" />
+
         <activity
             android:name=".VetLoginActivity"
             android:exported="true" />

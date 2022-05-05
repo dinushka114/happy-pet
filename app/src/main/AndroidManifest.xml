@@ -10,19 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyPet">
         <activity
+
             android:name=".drivermanager.RegisterDriver"
             android:exported="false" />
         <activity
             android:name=".SelectUserActivity"
             android:exported="false" />
+
         <activity
-            android:name=".SplashScreenActivity"
-            android:exported="false" />
+            android:name=".VetLoginActivity"
+            android:exported="true" />
         <activity
             android:name=".RegisterVetActivity"
             android:exported="false" />
         <activity
-            android:name=".VetLoginActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -10,23 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyPet">
         <activity
-            android:name=".Prescription1"
-            android:exported="false" />
-        <activity
-            android:name=".PharmacistDashboard"
-            android:exported="false" />
-        <activity
-            android:name=".PharmacistLoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterPharmacistActivity"
-            android:exported="false" />
-        <activity
-            android:name=".VetDashboardActivity"
+
+            android:name=".drivermanager.RegisterDriver"
             android:exported="false" />
         <activity
             android:name=".SelectUserActivity"
             android:exported="false" />
+
         <activity
             android:name=".VetLoginActivity"
             android:exported="true" />

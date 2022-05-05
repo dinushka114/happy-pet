@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyPet">
         <activity
+            android:name=".drivermanager.RegisterDriver"
+            android:exported="false" />
+        <activity
             android:name=".SelectUserActivity"
             android:exported="false" />
         <activity

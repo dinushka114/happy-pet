@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFC107"
+    android:background="#FFF"
     android:padding="20dp"
     android:gravity="center_vertical"
     tools:context=".SplashScreenActivity">
@@ -19,8 +19,8 @@
 
         <ImageView
             android:id="@+id/main_logo"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:src="@drawable/happy_pet_logo"/>

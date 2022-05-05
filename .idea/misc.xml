@@ -3,12 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.223" />
-        <entry key="app/src/main/res/layout/DriverManager/activity_register_driver.xml" value="0.1838905775075988" />
-        <entry key="app/src/main/res/layout/activity_select_user.xml" value="0.17274569402228976" />
-        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.14814814814814814" />
-        <entry key="app/src/main/res/layout/activity_vet_login.xml" value="0.22192028985507245" />
-        <entry key="app/src/main/res/layout/activity_vet_register.xml" value="0.17274569402228976" />
         <entry key="..\:/happy-pet/app/src/main/res/drawable/buttons_background.xml" value="0.2445" />
         <entry key="..\:/happy-pet/app/src/main/res/drawable/ic__mail.xml" value="0.2445" />
         <entry key="..\:/happy-pet/app/src/main/res/drawable/ic_address.xml" value="0.3285" />
@@ -25,6 +19,13 @@
         <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_dashboard.xml" value="0.264" />
         <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_login.xml" value="0.2552083333333333" />
         <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_register.xml" value="0.2" />
+        <entry key="app/src/main/res/drawable/buttons_background.xml" value="0.3445" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.223" />
+        <entry key="app/src/main/res/layout/DriverManager/activity_register_driver.xml" value="0.1838905775075988" />
+        <entry key="app/src/main/res/layout/activity_select_user.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.14814814814814814" />
+        <entry key="app/src/main/res/layout/activity_vet_login.xml" value="0.22192028985507245" />
+        <entry key="app/src/main/res/layout/activity_vet_register.xml" value="0.17274569402228976" />
       </map>
     </option>
   </component>

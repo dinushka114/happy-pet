@@ -10,6 +10,7 @@ import android.widget.Button;
 public class SelectUserActivity extends AppCompatActivity {
 
     private Button vet_login_act_btn;
+    private Button pharmacist_login_act_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,15 @@ public class SelectUserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_user);
 
         vet_login_act_btn = findViewById(R.id.vet_login_act_btn);
+        pharmacist_login_act_btn = findViewById(R.id.pharmacist_login_act_btn);
+
+        pharmacist_login_act_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SelectUserActivity.this, PharmacistDashboard.class);
+                startActivity(intent);
+            }
+        });
 
         vet_login_act_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,4 +36,6 @@ public class SelectUserActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

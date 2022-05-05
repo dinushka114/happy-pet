@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,9 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.database.DatabaseReference;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -47,7 +44,7 @@ public class RegisterVetActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vet_register);
 
         backButton = findViewById(R.id.backButton);
-        vetRegisterNowBtn = findViewById(R.id.vetRegisterNowBtn);
+        vetRegisterNowBtn = findViewById(R.id.pharamacistSignup);
 
     //vet registration button
         vetRegisterNowBtn.setOnClickListener(new View.OnClickListener() {
@@ -120,14 +117,14 @@ public class RegisterVetActivity extends AppCompatActivity {
             }
         });
 
-        vet_profile_image = findViewById(R.id.vet_profile_image);
-        vetFullName = findViewById(R.id.vetFullName);
-        vetClinicName = findViewById(R.id.vetClinicName);
-        vetClinicAddress = findViewById(R.id.vetClinicAddress);
-        vetClinicPhone = findViewById(R.id.vetClinicPhone);
+        vet_profile_image = findViewById(R.id.pharmacist_profile_image);
+        vetFullName = findViewById(R.id.pharmacistFullName);
+        vetClinicName = findViewById(R.id.pharmacyName);
+        vetClinicAddress = findViewById(R.id.centerAddress);
+        vetClinicPhone = findViewById(R.id.pharmacistContact);
         vetClinicHrs = findViewById(R.id.vetClinicHrs);
-        vetLoginEmail = findViewById(R.id.vetLoginEmail);
-        vetLoginPassword = findViewById(R.id.vetLoginPassword);
+        vetLoginEmail = findViewById(R.id.pharmacistLoginEmail);
+        vetLoginPassword = findViewById(R.id.pharmacistLoginPassword);
         loader = new ProgressDialog(this);
 
         //mAuth = new FirebaseAuth.getInstance();

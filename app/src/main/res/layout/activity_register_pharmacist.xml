@@ -20,199 +20,176 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="656dp"
             android:layout_margin="10dp"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="0dp"
-                android:src="@drawable/happy_pet_logo"/>
-
             <TextView
 
-                android:text="Veterinarian Registration"
-                android:textColor="#000"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"/>
-
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/sign_up"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:orientation="vertical"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/pharmacist_profile_image"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/person"
-                    app:civ_border_width="2dp"
                     android:layout_gravity="center"
-                    app:civ_border_color="#FF000000"/>
+                    android:src="@drawable/person"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:theme="@style/TextInputLayoutStyle"
                     app:boxStrokeColor="#000"
-                    app:hintTextAppearance="@color/colorPrimary"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    app:hintTextAppearance="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/pharmacistFullName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter full name"
+                        android:layout_marginTop="20dp"
+                        android:drawableStart="@drawable/ic_profile"
                         android:drawablePadding="10dp"
+                        android:hint="Enter full name"
                         android:textColor="#000"
-                        android:textSize="16sp"
                         android:textColorHint="#000"
-                        android:drawableStart="@drawable/ic_profile">
+                        android:textSize="16sp">
 
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:theme="@style/TextInputLayoutStyle"
                     app:boxStrokeColor="#000"
-                    app:hintTextAppearance="@color/colorPrimary"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    app:hintTextAppearance="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/pharmacyName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter clinic name"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/ic_clinic"
                         android:drawablePadding="10dp"
+                        android:hint="Enter pharmacy name"
                         android:textColor="#000"
-                        android:textSize="16sp"
                         android:textColorHint="#000"
-                        android:drawableStart="@drawable/ic_clinic">
+                        android:textSize="16sp">
 
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:theme="@style/TextInputLayoutStyle"
                     app:boxStrokeColor="#000"
-                    app:hintTextAppearance="@color/colorPrimary"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    app:hintTextAppearance="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/centerAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Enter clinic address"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/ic_address"
                         android:drawablePadding="10dp"
+                        android:hint="Enter pharmacy address"
                         android:textColor="#000"
-                        android:textSize="16sp"
                         android:textColorHint="#000"
-                        android:drawableStart="@drawable/ic_address">
+                        android:textSize="16sp">
 
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:theme="@style/TextInputLayoutStyle"
                     app:boxStrokeColor="#000"
-                    app:hintTextAppearance="@color/colorPrimary"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    app:hintTextAppearance="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/pharmacistContact"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/ic_phone"
+                        android:drawablePadding="10dp"
                         android:hint="Enter phone number"
                         android:inputType="number"
-                        android:drawablePadding="10dp"
                         android:textColor="#000"
-                        android:textSize="16sp"
                         android:textColorHint="#000"
-                        android:drawableStart="@drawable/ic_phone">
+                        android:textSize="16sp">
 
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
+
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:theme="@style/TextInputLayoutStyle"
                     app:boxStrokeColor="#000"
-                    app:hintTextAppearance="@color/colorPrimary"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/vetClinicHrs"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Enter opening hours"
-                        android:drawablePadding="10dp"
-                        android:textColor="#000"
-                        android:textSize="16sp"
-                        android:textColorHint="#000"
-                        android:drawableStart="@drawable/ic_time">
-
-                    </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:theme="@style/TextInputLayoutStyle"
-                    app:boxStrokeColor="#000"
-                    app:hintTextAppearance="@color/colorPrimary"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    app:hintTextAppearance="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/pharmacistLoginEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/ic_mail"
+                        android:drawablePadding="10dp"
                         android:hint="Enter email"
                         android:inputType="textEmailAddress"
-                        android:drawablePadding="10dp"
                         android:textColor="#000"
-                        android:textSize="16sp"
                         android:textColorHint="#000"
-                        android:drawableStart="@drawable/ic_mail">
+                        android:textSize="16sp">
 
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:theme="@style/TextInputLayoutStyle"
                     app:boxStrokeColor="#000"
-                    app:hintTextAppearance="@color/colorPrimary"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+                    app:hintTextAppearance="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/pharmacistLoginPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/ic_lock"
+                        android:drawablePadding="10dp"
                         android:hint="Enter password"
                         android:inputType="textPassword"
-                        android:drawablePadding="10dp"
                         android:textColor="#000"
-                        android:textSize="16sp"
                         android:textColorHint="#000"
-                        android:drawableStart="@drawable/ic_lock">
+                        android:textSize="16sp">
 
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -221,27 +198,27 @@
                     android:id="@+id/pharamacistSignup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Register Now"
-                    android:textSize="18sp"
-                    android:textAllCaps="false"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center"
-                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/buttons_background"
+                    android:text="Register Now"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/backButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Already registered? LOGIN"
-                    android:textStyle="bold"
-                    android:textSize="17sp"
-                    android:textAllCaps="false"
-                    android:layout_marginTop="20dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Already registered? LOGIN"
+                    android:textAllCaps="false"
                     android:textColor="#000"
-                    android:gravity="center"/>
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>

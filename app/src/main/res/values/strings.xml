@@ -13,4 +13,23 @@
     <string name="pet_owner">Pet Owner</string>
     <string name="what_best_describes_you">What best describes you?</string>
     <string name="hello_welcome_to_this_application">Hello, welcome to this application</string>
+    <string name="veterinarian_registration">Veterinarian Registration</string>
+    <string name="enter_full_name">Enter full name</string>
+    <string name="enter_clinic_name">Enter clinic name</string>
+    <string name="enter_clinic_address">Enter clinic address</string>
+    <string name="enter_opening_hours">Enter opening hours</string>
+    <string name="enter_email">Enter email</string>
+    <string name="enter_password">Enter password</string>
+    <string name="already_registered_login">Already registered? LOGIN</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="pet_owner_logo">pet owner logo</string>
+    <string name="welcome_pet_owner">Welcome Pet Owner</string>
+    <string name="pet_owner_registration">Pet Owner Registration</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="enter_address">Enter address</string>
+    <string name="add_photo">Add photo</string>
+    <string name="happy_pet_logo">happy pet logo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,16 +1,14 @@
-package com.example.happypet.drivermanager;
+package com.example.happypet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.happypet.R;
-
-public class RegisterDriver extends AppCompatActivity {
+public class startActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_register_driver);
+        setContentView(R.layout.activity_start);
     }
 }

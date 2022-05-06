@@ -140,7 +140,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/vetLoginEmail"
+                    android:id="@+id/pet_owner_LoginEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/enter_email"
@@ -154,10 +154,34 @@
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextInputLayoutStyle"
+                app:boxStrokeColor="#000"
+                app:hintTextAppearance="@color/colorPrimary"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pet_owner_LoginPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_password"
+                    android:inputType="textPassword"
+                    android:drawablePadding="10dp"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textColorHint="#000"
+                    android:drawableStart="@drawable/ic_lock">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
             <Button
-                android:id="@+id/vetRegisterNowBtn"
+                android:id="@+id/pet_ownerRegisterNowBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Register Now"

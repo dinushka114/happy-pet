@@ -186,7 +186,7 @@ public class RegisterPetOwnerActivity extends AppCompatActivity {
                                         }
                                     });
 
-                                    Intent intent = new Intent(RegisterPetOwnerActivity.this, VetDashboardActivity.class);
+                                    Intent intent = new Intent(RegisterPetOwnerActivity.this, PetOwnerDashBoardActivity.class);
                                     startActivity(intent);
                                     finish();
                                     loader.dismiss();

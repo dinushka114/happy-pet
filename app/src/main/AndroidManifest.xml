@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyPet">
         <activity
+            android:name=".PetOwnerDashBoardActivity"
+            android:exported="false" />
+        <activity
             android:name=".startActivity"
             android:exported="false" />
         <activity

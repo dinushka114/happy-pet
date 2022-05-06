@@ -124,7 +124,7 @@
                 android:id="@+id/vetRegister_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/don_t_have_an_account_register"
+                android:text="Don't have an account? REGISTER"
                 android:textSize="17sp"
                 android:textStyle="bold"
                 android:textAllCaps="false"

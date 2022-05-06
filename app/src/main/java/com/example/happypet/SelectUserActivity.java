@@ -18,6 +18,8 @@ public class SelectUserActivity extends AppCompatActivity {
 
         vet_login_act_btn = findViewById(R.id.vet_login_act_btn);
 
+
+
         vet_login_act_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

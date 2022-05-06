@@ -23,6 +23,11 @@
         <activity
             android:name=".RegisterVetActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".VetDashboardActivity"
+            android:exported="false" />
+
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">

@@ -121,7 +121,7 @@
                 tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/vetRegisterBtn"
+                android:id="@+id/vetRegister_Btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/don_t_have_an_account_register"

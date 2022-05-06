@@ -13,23 +13,17 @@
     <string name="pet_owner">Pet Owner</string>
     <string name="what_best_describes_you">What best describes you?</string>
     <string name="hello_welcome_to_this_application">Hello, welcome to this application</string>
-    <string name="veterinarian_registration">Veterinarian Registration</string>
-    <string name="enter_full_name">Enter full name</string>
-    <string name="enter_clinic_name">Enter clinic name</string>
-    <string name="enter_clinic_address">Enter clinic address</string>
-    <string name="enter_opening_hours">Enter opening hours</string>
-    <string name="enter_email">Enter email</string>
-    <string name="enter_password">Enter password</string>
-    <string name="already_registered_login">Already registered? LOGIN</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="pet_owner_logo">pet owner logo</string>
-    <string name="welcome_pet_owner">Welcome Pet Owner</string>
-    <string name="pet_owner_registration">Pet Owner Registration</string>
-    <string name="enter_first_name">Enter first name</string>
-    <string name="enter_phone_number">Enter phone number</string>
-    <string name="enter_address">Enter address</string>
-    <string name="add_photo">Add photo</string>
-    <string name="happy_pet_logo">happy pet logo</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_pharmacist">Welcome pharmacist</string>
+    <string name="welcome_pharmacists">Welcome Pharmacist</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="pharmacist_dashboard">Pharmacist Dashboard</string>
+    <string name="pharmacist_name">Pharmacist Name</string>
+    <string name="pharmacy">Pharmacy</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="pet_id">Pet ID</string>
+    <string name="pet_name">Pet Name</string>
+    <string name="category">Category</string>
+    <string name="breed">Breed</string>
+    <string name="age">Age</string>
+    <string name="continue_btn">Continue</string>
 </resources>

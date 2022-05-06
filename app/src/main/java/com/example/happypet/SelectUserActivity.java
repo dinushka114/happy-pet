@@ -23,7 +23,7 @@ public class SelectUserActivity extends AppCompatActivity {
         pharmacist_login_act_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectUserActivity.this, PharmacistDashboard.class);
+                Intent intent = new Intent(SelectUserActivity.this, PharmacistLoginActivity.class);
                 startActivity(intent);
             }
         });

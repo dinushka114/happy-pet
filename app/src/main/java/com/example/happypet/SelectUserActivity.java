@@ -10,6 +10,7 @@ import android.widget.Button;
 public class SelectUserActivity extends AppCompatActivity {
 
     private Button vet_login_act_btn;
+    private Button pet_owner_login_act_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,16 @@ public class SelectUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SelectUserActivity.this, VetLoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        pet_owner_login_act_btn = findViewById(R.id.pet_owner_login_act_btn);
+
+        pet_owner_login_act_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SelectUserActivity.this, PetOwnerLoginActivity.class);
                 startActivity(intent);
             }
         });

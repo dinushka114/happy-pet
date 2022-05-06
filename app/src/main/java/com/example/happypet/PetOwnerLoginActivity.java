@@ -61,7 +61,9 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
         pet_ownerRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(PetOwnerLoginActivity.this, RegisterPetOwnerActivity.class);
+                intent = new Intent(PetOwnerLoginActivity.this, PetOwnerHomeActivity.class);
                 startActivity(intent);
             }
         });

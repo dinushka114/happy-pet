@@ -18,7 +18,7 @@ public class SelectUserActivity extends AppCompatActivity {
 
         vet_login_act_btn = findViewById(R.id.vet_login_act_btn);
 
-
+        pet_owner_login_act_btn = findViewById(R.id.pet_owner_login_act_btn);
 
         vet_login_act_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,14 +28,14 @@ public class SelectUserActivity extends AppCompatActivity {
             }
         });
 
-        pet_owner_login_act_btn = findViewById(R.id.pet_owner_login_act_btn);
 
         pet_owner_login_act_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectUserActivity.this, PetOwnerLoginActivity.class);
+                Intent intent = new Intent(SelectUserActivity.this, PetOwnerHomeActivity.class);
                 startActivity(intent);
             }
         });
+
     }
 }

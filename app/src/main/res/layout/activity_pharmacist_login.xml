@@ -111,7 +111,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/vetRegisterBtn"
+            android:id="@+id/pharmacistRegisterBtn"
             android:layout_width="match_parent"
             android:layout_height="47dp"
             android:layout_gravity="center"

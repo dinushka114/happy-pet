@@ -43,4 +43,5 @@
     <string name="enter_clinic_address">Enter clinic address</string>
     <string name="enter_opening_hours">Enter opening hours</string>
     <string name="enter_password">Enter password</string>
+    <string name="pharmacist_forgetPassword">Forget password ?</string>
 </resources>

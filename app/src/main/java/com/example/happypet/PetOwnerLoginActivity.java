@@ -110,6 +110,14 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        pet_ownerLoginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PetOwnerLoginActivity.this, PetOwnerHomeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

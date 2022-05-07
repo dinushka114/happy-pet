@@ -101,8 +101,12 @@ public class VetDashboardActivity extends AppCompatActivity implements Navigatio
         }
         switch (item.getItemId()) {
             case R.id.vetLogOut:
+
+                FirebaseAuth.getInstance().signOut();
+
                 Intent intent = new Intent(VetDashboardActivity.this, SelectUserActivity.class);
                 startActivity(intent);
+                finish();
         }
         vetDrawerLayout.closeDrawer(GravityCompat.START);
         return true;

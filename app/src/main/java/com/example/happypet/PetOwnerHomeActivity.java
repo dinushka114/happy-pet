@@ -1,10 +1,8 @@
 package com.example.happypet;
 
+import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-
-import android.os.Bundle;
-
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
 public class PetOwnerHomeActivity extends AppCompatActivity {
@@ -42,7 +40,7 @@ public class PetOwnerHomeActivity extends AppCompatActivity {
                         //when id is 2
                         //initialize vets fragment
                         fragment = new VetsFragment();
-                    break;
+                        break;
                     case 3:
                         //when id is 3
                         //initialize appointments fragment
@@ -87,16 +85,13 @@ public class PetOwnerHomeActivity extends AppCompatActivity {
 
             }
         });
-
-
-
     }
 
     private void loadFragment(Fragment fragment) {
-       //replace fragment
-       getSupportFragmentManager()
-               .beginTransaction()
-               .replace(R.id.frame_layout,fragment)
-               .commit();
+        //replace fragment
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.frame_layout,fragment)
+                .commit();
     }
 }

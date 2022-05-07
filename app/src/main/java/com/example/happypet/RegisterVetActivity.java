@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -102,6 +103,11 @@ public class RegisterVetActivity extends AppCompatActivity {
                     return;
                 }
 
+                if(vetClinicPhone.length()!=10){
+                    vetClinicPhone.setError("Enter valid phone no");
+                    return;
+                }
+
                 if(TextUtils.isEmpty(clinicHrs)){
                     vetClinicHrs.setError("Clinic hours are required!");
                     return;
@@ -112,8 +118,19 @@ public class RegisterVetActivity extends AppCompatActivity {
                     return;
                 }
 
+
+                if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    vetLoginEmail.setError("Email is not valid!!");
+                    return;
+                }
+
                 if(TextUtils.isEmpty(password)){
                     vetLoginPassword.setError("Password is required!");
+                    return;
+                }
+
+                if(password.length()<5){
+                    vetLoginPassword.setError("Password must be include minimum 6 characters");
                     return;
                 }
 
@@ -148,7 +165,7 @@ public class RegisterVetActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task task) {
                                         if(task.isSuccessful()){
-                                            Toast.makeText(RegisterVetActivity.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RegisterVetActivity.this, "Vet Registration Successful!", Toast.LENGTH_SHORT).show();
                                         }else{
                                             Toast.makeText(RegisterVetActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                                         }

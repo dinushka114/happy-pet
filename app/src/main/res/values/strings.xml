@@ -34,4 +34,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="vet_navigation_drawer_open">Open navigation drawer</string>
     <string name="vet_navigation_drawer_close">Close navigation drawer</string>
+    <string name="welcome_driver">Welcome Driver</string>
+    <string name="ui_title">Driver Registration</string>
+    <string name="nic_hint">Enter NIC no</string>
+    <string name="driver_nic">Enter NIC No</string>
+    <string name="vehicle_no">Enter Vehicle No</string>
+    <string name="vehicle_color">Vehicle Color</string>
+    <string name="vehicle_type">Vehicle Type</string>
+
 </resources>

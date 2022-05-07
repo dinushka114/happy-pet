@@ -21,7 +21,15 @@
             android:name=".PetOwnerLoginActivity"
             android:exported="false" />
         <activity
+
             android:name=".drivermanager.RegisterDriver"
+            android:exported="false" />
+
+            android:name=".drivermanager.LoginDriver"
+            android:exported="false" />
+        <activity
+            android:name=".drivermanager.RegisterDriverActivity"
+
             android:exported="false" />
         <activity
             android:name=".SelectUserActivity"

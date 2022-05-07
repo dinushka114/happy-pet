@@ -116,9 +116,10 @@
                 android:textAllCaps="false"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center"
+                android:onClick="signIn"
                 android:textColor="#fff"
                 android:background="@drawable/buttons_background"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,OnClick" />
 
             <TextView
                 android:id="@+id/driverRegisterBtn"

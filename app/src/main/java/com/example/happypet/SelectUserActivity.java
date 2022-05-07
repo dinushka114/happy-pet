@@ -17,6 +17,7 @@ public class SelectUserActivity extends AppCompatActivity {
     private Button driver_login_act_btn;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,13 @@ public class SelectUserActivity extends AppCompatActivity {
         });
 
 
+        driver_login_act_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SelectUserActivity.this, LoginDriver.class);
+                startActivity(intent);
+            }
+        });
 
         pet_owner_login_act_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +53,7 @@ public class SelectUserActivity extends AppCompatActivity {
             }
         });
 
+
         driver_login_act_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,6 +61,7 @@ public class SelectUserActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
     }
 }

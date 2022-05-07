@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/layout/activity_pet_owner_login.xml" value="0.152" />
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/layout/activity_register_driver.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/layout/activity_register_pet_owner.xml" value="0.2" />
@@ -11,47 +10,17 @@
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/layout/activity_splash_screen.xml" value="0.18432971014492755" />
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/layout/activity_vet_login.xml" value="0.1" />
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/layout/activity_vet_register.xml" value="0.16799999999999998" />
+        <entry key="..\:/happy-pet/app/src/main/res/drawable/vet_header_background.xml" value="0.154" />
         <entry key="..\:/happy-pet/app/src/main/res/drawable/vet_nav_selector.xml" value="0.154" />
+        <entry key="..\:/happy-pet/app/src/main/res/drawable/vet_nav_view_items_selected.xml" value="0.154" />
         <entry key="..\:/happy-pet/app/src/main/res/layout/activity_pet_owner_home.xml" value="0.17831813576494426" />
+        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_register_driver.xml" value="0.26927083333333335" />
         <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_dashboard.xml" value="0.17831813576494426" />
+        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_profile.xml" value="0.152" />
+        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_profile2.xml" value="0.36666666666666664" />
+        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_register.xml" value="0.13095238095238096" />
         <entry key="..\:/happy-pet/app/src/main/res/layout/vet_header.xml" value="0.12817028985507245" />
-=======
-        <entry key="..\:/happy-pet/app/src/main/res/drawable/buttons_background.xml" value="0.2445" />
-        <entry key="..\:/happy-pet/app/src/main/res/drawable/ic__mail.xml" value="0.2445" />
-        <entry key="..\:/happy-pet/app/src/main/res/drawable/ic_address.xml" value="0.3285" />
-        <entry key="..\:/happy-pet/app/src/main/res/drawable/ic_clinic.xml" value="0.3285" />
-        <entry key="..\:/happy-pet/app/src/main/res/drawable/ic_lock.xml" value="0.3285" />
-        <entry key="..\:/happy-pet/app/src/main/res/drawable/ic_mail.xml" value="0.3285" />
-        <entry key="..\:/happy-pet/app/src/main/res/drawable/ic_phone.xml" value="0.3285" />
-        <entry key="..\:/happy-pet/app/src/main/res/drawable/ic_profile.xml" value="0.3285" />
-        <entry key="..\:/happy-pet/app/src/main/res/drawable/ic_time.xml" value="0.3285" />
-        <entry key="..\:/happy-pet/app/src/main/res/layout/Activity_Vet_Login.xml" value="0.264" />
-        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_select_user.xml" value="0.264" />
-        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
-        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_dashboard.xml" value="0.264" />
-        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_login.xml" value="0.2552083333333333" />
-        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_register.xml" value="0.25" />
-        <entry key="app/src/main/res/drawable/buttons_background.xml" value="0.3445" />
-        <entry key="app/src/main/res/drawable/ic_address.xml" value="0.272" />
-        <entry key="app/src/main/res/drawable/ic_clinic.xml" value="0.272" />
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.223" />
-        <entry key="app/src/main/res/drawable/ic_mail.xml" value="0.272" />
-        <entry key="app/src/main/res/drawable/ic_nic.xml" value="0.272" />
-        <entry key="app/src/main/res/drawable/ic_password.xml" value="0.272" />
-        <entry key="app/src/main/res/drawable/ic_phone.xml" value="0.272" />
-        <entry key="app/src/main/res/drawable/ic_profile.xml" value="0.272" />
-        <entry key="app/src/main/res/drawable/ic_time.xml" value="0.272" />
-        <entry key="app/src/main/res/drawable/ic_vehicle_no.xml" value="0.272" />
-        <entry key="app/src/main/res/drawable/ic_vehicle_type.xml" value="0.272" />
-        <entry key="app/src/main/res/layout/DriverManager/activity_register_driver.xml" value="0.1838905775075988" />
-        <entry key="app/src/main/res/layout/activity_login_driver.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_register_driver.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_select_user.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.14814814814814814" />
-        <entry key="app/src/main/res/layout/activity_vet_login.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_vet_register.xml" value="0.17274569402228976" />
->>>>>>> 723ce2eb84df4de7c8e67a138ebaf85a3b963f80
+        <entry key="..\:/happy-pet/app/src/main/res/menu/vet_main_menu.xml" value="0.12037037037037036" />
       </map>
     </option>
   </component>

@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyPet" >
         <activity
+            android:name=".VetProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".vetandappointmentsmanage.VetProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".PetOwnerHomeActivity"
             android:exported="false" />
         <activity
@@ -21,15 +27,10 @@
             android:name=".PetOwnerLoginActivity"
             android:exported="false" />
         <activity
-
             android:name=".drivermanager.RegisterDriver"
-            android:exported="false" />
-
-            android:name=".drivermanager.LoginDriver"
             android:exported="false" />
         <activity
             android:name=".drivermanager.RegisterDriverActivity"
-
             android:exported="false" />
         <activity
             android:name=".SelectUserActivity"

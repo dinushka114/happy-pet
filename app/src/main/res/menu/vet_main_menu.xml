@@ -13,15 +13,15 @@
                     android:icon="@drawable/ic_person"
                     android:title="Profile"/>
 
-            <item
-                android:id="@+id/vetAppointments"
-                android:icon="@drawable/ic_appointments"
-                android:title="Appointments"/>
+                <item
+                    android:id="@+id/vetAppointments"
+                    android:icon="@drawable/ic_appointments"
+                    android:title="Appointments"/>
 
-            <item
-                android:id="@+id/vetLogOut"
-                android:icon="@drawable/ic_logout"
-                android:title="LogOut"/>
+                <item
+                    android:id="@+id/vetLogOut"
+                    android:icon="@drawable/ic_logout"
+                    android:title="LogOut"/>
             </group>
         </menu>
     </item>

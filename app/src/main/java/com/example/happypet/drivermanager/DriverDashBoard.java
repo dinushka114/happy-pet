@@ -12,5 +12,6 @@ public class DriverDashBoard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_dash_board);
+        //setContentView(R.layout.activity_register_driver);
     }
 }

@@ -190,7 +190,7 @@ public class RegisterVetActivity extends AppCompatActivity {
                                                     public void onSuccess(Uri uri) {
                                                         String imageUrl = uri.toString();
                                                         Map newImageMap = new HashMap();
-                                                        newImageMap.put("vetprofilepictureurl", imageUrl);
+                                                        newImageMap.put("vetProfilePictureUrl", imageUrl);
 
                                                         userDatabaseRef.updateChildren(newImageMap).addOnCompleteListener(new OnCompleteListener() {
                                                             @Override

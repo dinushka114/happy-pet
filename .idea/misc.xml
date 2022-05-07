@@ -32,6 +32,7 @@
         <entry key="app/src/main/res/drawable/ic_vehicle_no.xml" value="0.272" />
         <entry key="app/src/main/res/drawable/ic_vehicle_type.xml" value="0.272" />
         <entry key="app/src/main/res/layout/DriverManager/activity_register_driver.xml" value="0.1838905775075988" />
+        <entry key="app/src/main/res/layout/activity_driver_dash_board.xml" value="0.11803444782168186" />
         <entry key="app/src/main/res/layout/activity_login_driver.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register_driver.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_select_user.xml" value="0.1" />

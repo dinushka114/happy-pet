@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:background="#FFF"
-    tools:context=".RegisterVetActivity">
+    tools:context=".RegisterPetOwnerActivity">
 
 
 
@@ -22,12 +22,13 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
+            android:contentDescription="@string/happy_pet_logo"
             android:layout_marginTop="0dp"
             android:src="@drawable/happy_pet_logo"/>
 
         <TextView
 
-            android:text="@string/ui_title"
+            android:text="@string/pet_owner_registration"
             android:textColor="#000"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -46,7 +47,7 @@
             android:layout_marginBottom="20dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/vet_profile_image"
+                android:id="@+id/pet_owner_profile_image"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/person"
@@ -56,7 +57,7 @@
 
 
             <TextView
-                android:text="Add photo"
+                android:text="@string/add_photo"
                 android:gravity="center"
 
                 android:layout_marginBottom="10dp"
@@ -73,7 +74,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/driverFullName"
+                    android:id="@+id/FullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/enter_full_name"
@@ -95,33 +96,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/driverNicNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/nic_hint"
-                    android:drawablePadding="10dp"
-                    android:textColor="#000"
-                    android:textSize="16sp"
-                    android:textColorHint="#000"
-                    android:drawableStart="@drawable/ic_nic">
-
-                </com.google.android.material.textfield.TextInputEditText>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/TextInputLayoutStyle"
-                app:boxStrokeColor="#000"
-                app:hintTextAppearance="@color/colorPrimary"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/driverPhoneNo"
+                    android:id="@+id/Phone_Number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/enter_phone_number"
-                    android:inputType="number"
                     android:drawablePadding="10dp"
                     android:textColor="#000"
                     android:textSize="16sp"
@@ -140,16 +118,15 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/driverEmail"
+                    android:id="@+id/pet_owner_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/enter_email"
-                    android:inputType="textEmailAddress"
+                    android:hint="@string/enter_address"
                     android:drawablePadding="10dp"
                     android:textColor="#000"
                     android:textSize="16sp"
                     android:textColorHint="#000"
-                    android:drawableStart="@drawable/ic_mail">
+                    android:drawableStart="@drawable/ic_address">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
@@ -163,22 +140,24 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/driverPassword"
+                    android:id="@+id/vetLoginEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/enter_password"
-                    android:inputType="textPassword"
+                    android:hint="@string/enter_email"
+                    android:inputType="textEmailAddress"
                     android:drawablePadding="10dp"
                     android:textColor="#000"
                     android:textSize="16sp"
                     android:textColorHint="#000"
-                    android:drawableStart="@drawable/ic_password">
+                    android:drawableStart="@drawable/ic_mail">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
+
+
             <Button
-                android:id="@+id/driverRegisterBtn"
+                android:id="@+id/vetRegisterNowBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Register Now"
@@ -211,10 +190,3 @@
 
 
 </ScrollView>
-
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent">-->
-
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-

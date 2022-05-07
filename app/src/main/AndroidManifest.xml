@@ -28,7 +28,7 @@
             android:exported="false" />
         <activity
             android:name=".VetLoginActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".RegisterVetActivity"
             android:exported="false" />

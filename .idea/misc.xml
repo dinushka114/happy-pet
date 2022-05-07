@@ -10,6 +10,10 @@
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/layout/activity_splash_screen.xml" value="0.18432971014492755" />
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/layout/activity_vet_login.xml" value="0.1" />
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/layout/activity_vet_register.xml" value="0.16799999999999998" />
+        <entry key="..\:/happy-pet/app/src/main/res/drawable/vet_nav_selector.xml" value="0.154" />
+        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_pet_owner_home.xml" value="0.17831813576494426" />
+        <entry key="..\:/happy-pet/app/src/main/res/layout/activity_vet_dashboard.xml" value="0.17831813576494426" />
+        <entry key="..\:/happy-pet/app/src/main/res/layout/vet_header.xml" value="0.12817028985507245" />
       </map>
     </option>
   </component>

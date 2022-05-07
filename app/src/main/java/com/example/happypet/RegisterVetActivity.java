@@ -72,24 +72,15 @@ public class RegisterVetActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                final String email = vetLoginEmail.getText().toString().trim();
-                final String password = vetLoginPassword.getText().toString().trim();
                 final String fullName = vetFullName.getText().toString().trim();
                 final String clinicName = vetClinicName.getText().toString().trim();
                 final String clinicAddress = vetClinicAddress.getText().toString().trim();
                 final String clinicPhone = vetClinicPhone.getText().toString().trim();
                 final String clinicHrs = vetClinicHrs.getText().toString().trim();
+                final String email = vetLoginEmail.getText().toString().trim();
+                final String password = vetLoginPassword.getText().toString().trim();
 
 
-                if(TextUtils.isEmpty(email)){
-                    vetLoginEmail.setError("Email is required!");
-                    return;
-                }
-
-                if(TextUtils.isEmpty(password)){
-                    vetLoginPassword.setError("Password is required!");
-                    return;
-                }
 
                 if(TextUtils.isEmpty(fullName)){
                     vetFullName.setError("Full name is required!");
@@ -113,6 +104,16 @@ public class RegisterVetActivity extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(clinicHrs)){
                     vetClinicHrs.setError("Clinic hours are required!");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(email)){
+                    vetLoginEmail.setError("Email is required!");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(password)){
+                    vetLoginPassword.setError("Password is required!");
                     return;
                 }
 
@@ -237,7 +238,7 @@ public class RegisterVetActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+    //initialize variables
         vet_profile_image = findViewById(R.id.vet_profile_image);
         vetFullName = findViewById(R.id.vetFullName);
         vetClinicName = findViewById(R.id.vetClinicName);

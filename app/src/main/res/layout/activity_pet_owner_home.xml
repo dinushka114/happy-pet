@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/bottom_navigation"
         app:mbn_circleColor="#FFEF00"
-        app:mbn_selectedIconColor="#000"
+        app:mbn_selectedIconColor="#004AAD"
         app:mbn_countTextColor="#000"
         app:mbn_countBackgroundColor="#000"
         app:mbn_defaultIconColor="#fff"

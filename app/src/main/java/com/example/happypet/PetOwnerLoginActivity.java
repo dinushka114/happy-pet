@@ -90,7 +90,7 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(PetOwnerLoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(PetOwnerLoginActivity.this, VetDashboardActivity.class);
+                                Intent intent = new Intent(PetOwnerLoginActivity.this, PetOwnerDashBoardActivity.class);
                                 startActivity(intent);
                                 finish();
                             }else{
@@ -103,8 +103,16 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
 
             }
         });
-
+        pet_ownerRegisterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PetOwnerLoginActivity.this, RegisterPetOwnerActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
+
 
     @Override
     protected void onStart() {

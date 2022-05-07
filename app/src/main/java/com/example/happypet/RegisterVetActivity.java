@@ -171,7 +171,7 @@ public class RegisterVetActivity extends AppCompatActivity {
                                     bitmap.compress(Bitmap.CompressFormat.JPEG, 20, byteArrayOutputStream);
                                     byte[] data = byteArrayOutputStream.toByteArray();
                                     UploadTask uploadTask = filePath.putBytes(data);
-                                    
+
                                     uploadTask.addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {

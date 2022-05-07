@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1045707634089",
-    "project_id": "happypet-54201",
-    "storage_bucket": "happypet-54201.appspot.com"
+    "project_number": "905823281119",
+    "project_id": "happypet-fc530",
+    "storage_bucket": "happypet-fc530.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1045707634089:android:8ad31207c0b6e3603e40b8",
+        "mobilesdk_app_id": "1:905823281119:android:62986819fff88a42bdee6a",
         "android_client_info": {
           "package_name": "com.sliit.happypet"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1045707634089-ca6bth1m71kp8cvivio978kn3318v7hb.apps.googleusercontent.com",
+          "client_id": "905823281119-66q72oei3rt2mmnqgunl6g1unvbl3qe1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCk1OaFeJ4hyWIJozwj8di45z8l6lFGg5o"
+          "current_key": "AIzaSyAws104EEvnQAh9L4c1eEaQyvfmCgAfr8E"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1045707634089-ca6bth1m71kp8cvivio978kn3318v7hb.apps.googleusercontent.com",
+              "client_id": "905823281119-66q72oei3rt2mmnqgunl6g1unvbl3qe1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

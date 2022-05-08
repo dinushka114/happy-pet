@@ -23,13 +23,15 @@
     <string name="already_registered_login">Already registered? LOGIN</string>
     <string name="forgot_password">Forgot password?</string>
 
+
     <string name="welcome_driver">Welcome Driver</string>
     <string name="ui_title">Driver Registration</string>
     <string name="nic_hint">Enter NIC no</string>
     <string name="driver_nic">Enter NIC No</string>
-    <string name="vehicle_no">ENter Vehicle No</string>
+    <string name="vehicle_no">Enter Vehicle No</string>
     <string name="vehicle_color">Vehicle Color</string>
     <string name="vehicle_type">Vehicle Type</string>
+
 
     <string name="pet_owner_logo">pet owner logo</string>
     <string name="welcome_pet_owner">Welcome Pet Owner</string>
@@ -41,4 +43,9 @@
     <string name="happy_pet_logo">happy pet logo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="vet_navigation_drawer_open">Open navigation drawer</string>
+    <string name="vet_navigation_drawer_close">Close navigation drawer</string>
+
+
 </resources>

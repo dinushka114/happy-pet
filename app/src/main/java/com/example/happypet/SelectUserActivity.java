@@ -12,8 +12,11 @@ import com.example.happypet.drivermanager.LoginDriver;
 public class SelectUserActivity extends AppCompatActivity {
 
 
-    private Button vet_login_act_btn , driver_login_act_btn;
+    private Button vet_login_act_btn;
     private Button pet_owner_login_act_btn;
+    private Button driver_login_act_btn;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,7 @@ public class SelectUserActivity extends AppCompatActivity {
             }
         });
 
+
         driver_login_act_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,10 +48,20 @@ public class SelectUserActivity extends AppCompatActivity {
         pet_owner_login_act_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectUserActivity.this, PetOwnerHomeActivity.class);
+                Intent intent = new Intent(SelectUserActivity.this, PetOwnerLoginActivity.class);
                 startActivity(intent);
             }
         });
+
+
+        driver_login_act_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SelectUserActivity.this, LoginDriver.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

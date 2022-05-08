@@ -16,6 +16,10 @@
             android:name=".drivermanager.DriverManagerHomeActivity"
             android:exported="false" />
         <activity
+            android:name=".VetProfileActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".PetOwnerHomeActivity"
             android:exported="false" />
         <activity
@@ -24,11 +28,13 @@
         <activity
             android:name=".PetOwnerLoginActivity"
             android:exported="false" />
+
         <activity
             android:name=".drivermanager.DriverDashBoard"
             android:exported="false" />
         <activity
             android:name=".drivermanager.LoginDriver"
+
             android:exported="false" />
         <activity
             android:name=".drivermanager.RegisterDriverActivity"
@@ -38,7 +44,7 @@
             android:exported="false" />
         <activity
             android:name=".VetLoginActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".RegisterVetActivity"
             android:exported="false" />

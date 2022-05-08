@@ -1,19 +1,15 @@
-package com.example.happypet.drivermanager;
+package com.example.happypet.vetandappointmentsmanage;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 import com.example.happypet.R;
 
-public class DriverDashBoard extends AppCompatActivity {
+public class VetProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_driver_dash_board);
-
-        //setContentView(R.layout.activity_register_driver);
+        setContentView(R.layout.activity_vet_profile);
     }
 }

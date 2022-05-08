@@ -1,23 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/vetDrawerLayout"
+    tools:openDrawer="start"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
     tools:context=".VetDashboardActivity">
 
-    <Button
-        android:id="@+id/vetLogOutBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Log Out"
-        android:textSize="18sp"
-        android:textAllCaps="false"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:textColor="#fff"
-        android:background="@drawable/buttons_background"
-        tools:ignore="HardcodedText" />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <androidx.appcompat.widget.Toolbar
+           android:id="@+id/vetToolBar"
+           android:elevation="4dp"
+           android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+           app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="#004AAD"/>
+
+       <androidx.coordinatorlayout.widget.CoordinatorLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <ProgressBar
+               android:id="@+id/vetProgressBar"
+               android:layout_gravity="center_vertical|center_horizontal"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/vetRecyclerView"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"/>
+
+       </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-</LinearLayout>
+   </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/vetNav_view"
+        app:headerLayout="@layout/vet_header"
+        app:menu="@menu/vet_main_menu"
+        android:layout_gravity="start"
+        app:itemIconTint="@drawable/vet_nav_selector"
+        app:itemTextColor="@drawable/vet_nav_view_items_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

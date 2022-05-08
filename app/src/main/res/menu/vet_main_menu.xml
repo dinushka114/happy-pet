@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_feed"
+        android:title="Veterinarian Dashboard">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/vetProfile"
+                    android:icon="@drawable/ic_person"
+                    android:title="Profile"/>
+
+                <item
+                    android:id="@+id/vetAppointments"
+                    android:icon="@drawable/ic_appointments"
+                    android:title="Appointments"/>
+
+                <item
+                    android:id="@+id/vetLogOut"
+                    android:icon="@drawable/ic_logout"
+                    android:title="LogOut"/>
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

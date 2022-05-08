@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -60,6 +61,15 @@ public class RegisterDriverActivity extends AppCompatActivity {
         driverNicNo = findViewById(R.id.driverNicNo);
         driverPhoneNo = findViewById(R.id.driverPhoneNo);
         driverPassword = findViewById(R.id.driverPassword);
+        backButton = findViewById(R.id.backButton);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterDriverActivity.this, LoginDriver.class);
+                startActivity(intent);
+            }
+        });
 
 
         driverRegisterBtn.setOnClickListener(new View.OnClickListener() {
@@ -130,8 +140,9 @@ public class RegisterDriverActivity extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
-                                                Toast.makeText(RegisterDriverActivity.this , "Driver Register successfully!!" , Toast.LENGTH_LONG).show();
-                                                System.out.println("SHARE");
+                                                Toast.makeText(RegisterDriverActivity.this , "Driver Register successfully!!\nnow you can login via email and password" , Toast.LENGTH_LONG).show();
+                                                Intent intent = new Intent(RegisterDriverActivity.this, LoginDriver.class);
+                                                startActivity(intent);
                                             }else{
                                                 Toast.makeText(RegisterDriverActivity.this , "Driver Register Failed!!" , Toast.LENGTH_LONG).show();
                                             }

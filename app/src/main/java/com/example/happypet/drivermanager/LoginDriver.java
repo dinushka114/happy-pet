@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.happypet.PetOwnerHomeActivity;
 import com.example.happypet.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -79,7 +80,7 @@ public class LoginDriver extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Intent intent = new Intent(LoginDriver.this, DriverDashBoard.class);
+                            Intent intent = new Intent(LoginDriver.this, DriverManagerHomeActivity.class);
                             startActivity(intent);
 
                         }else{

@@ -45,24 +45,24 @@
             android:orientation="vertical"
             android:layout_marginBottom="20dp">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/vet_profile_image"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/person"
-                app:civ_border_width="2dp"
-                android:layout_gravity="center"
-                app:civ_border_color="#FF000000"/>
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/vet_profile_image"-->
+<!--                android:layout_width="80dp"-->
+<!--                android:layout_height="80dp"-->
+<!--                android:src="@drawable/person"-->
+<!--                app:civ_border_width="2dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                app:civ_border_color="#FF000000"/>-->
 
 
-            <TextView
-                android:text="Add photo"
-                android:gravity="center"
+<!--            <TextView-->
+<!--                android:text="Add photo"-->
+<!--                android:gravity="center"-->
 
-                android:layout_marginBottom="10dp"
-                android:textColor="#000"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:textColor="#000"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"

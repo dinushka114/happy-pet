@@ -13,9 +13,6 @@
         android:theme="@style/Theme.HappyPet" >
 
         <activity
-            android:name=".drivermanager.DriverManagerHomeActivity"
-            android:exported="false" />
-        <activity
             android:name=".VetProfileActivity"
             android:exported="false" />
 

@@ -1,13 +1,8 @@
 package com.example.happypet;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -17,6 +12,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -150,8 +149,8 @@ public class RegisterVetActivity extends AppCompatActivity {
                             }
                             else{
                                 String currentUserId = mAuth.getCurrentUser().getUid();
-                                userDatabaseRef = FirebaseDatabase.getInstance().getReference()
-                                        .child("vets").child(currentUserId);
+                                userDatabaseRef = FirebaseDatabase.getInstance().getReference("vets")
+                                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
                                 HashMap vetInfo = new HashMap();
                                 vetInfo.put("id", currentUserId);
                                 vetInfo.put("fullName", fullName);

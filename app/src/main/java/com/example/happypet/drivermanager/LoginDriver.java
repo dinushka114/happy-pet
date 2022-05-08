@@ -12,12 +12,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.happypet.PetOwnerHomeActivity;
 import com.example.happypet.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -80,7 +78,7 @@ public class LoginDriver extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Intent intent = new Intent(LoginDriver.this, DriverManagerHomeActivity.class);
+                            Intent intent = new Intent(LoginDriver.this, DriverDashBoard.class);
                             startActivity(intent);
 
                         }else{

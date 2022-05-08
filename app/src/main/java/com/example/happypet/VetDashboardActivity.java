@@ -33,8 +33,8 @@ public class VetDashboardActivity extends AppCompatActivity implements Navigatio
     private Toolbar vetToolBar;
     private NavigationView vetNav_view;
 
-    private CircleImageView vet_nav_user_image;
-    private TextView vet_nav_fullName, vet_nav_vetEmail;
+    private CircleImageView vet_profile_image;
+    private TextView vetFullName, vetLoginEmail;
 
     private DatabaseReference userRef;
 
@@ -60,11 +60,11 @@ public class VetDashboardActivity extends AppCompatActivity implements Navigatio
         vetDrawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        vet_nav_user_image = vetNav_view.getHeaderView(0).findViewById(R.id.vet_nav_user_image);
-        vet_nav_fullName = vetNav_view.getHeaderView(0).findViewById(R.id.vet_nav_fullName);
-        vet_nav_vetEmail = vetNav_view.getHeaderView(0).findViewById(R.id.vet_nav_vetEmail);
+        vet_profile_image = vetNav_view.getHeaderView(0).findViewById(R.id.vet_profile_image);
+        vetFullName = vetNav_view.getHeaderView(0).findViewById(R.id.vetFullName);
+        vetLoginEmail = vetNav_view.getHeaderView(0).findViewById(R.id.vetLoginEmail);
 
-        userRef = FirebaseDatabase.getInstance().getReference().child("vets").child(
+        userRef = FirebaseDatabase.getInstance().getReference("vets").child(
                 FirebaseAuth.getInstance().getCurrentUser().getUid()
         );
 
@@ -73,12 +73,20 @@ public class VetDashboardActivity extends AppCompatActivity implements Navigatio
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     String fullName = snapshot.child("fullName").getValue().toString();
-                    vet_nav_fullName.setText(fullName);
+                    vetFullName.setText(fullName);
 
                     String email = snapshot.child("email").getValue().toString();
-                    vet_nav_vetEmail.setText(email);
+                    vetLoginEmail.setText(email);
 
-                    Glide.with(getApplicationContext()).load(snapshot.child("vetProfilePictureUrl").getValue().toString()).into(vet_nav_user_image);
+                    if(snapshot.hasChild("vetProfilePictureUrl")){
+                        String imageUrl = snapshot.child("vetProfilePictureUrl").getValue().toString();
+                        Glide.with(getApplicationContext()).load(imageUrl).into(vet_profile_image);
+                    }
+                    else{
+                        vet_profile_image.setImageResource(R.drawable.person);
+                    }
+
+
                 }
             }
 

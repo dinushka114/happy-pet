@@ -25,7 +25,7 @@ public class VetProfileActivity extends AppCompatActivity {
 
     private Toolbar vetToolBar;
     private TextView  vetFullName, vetLoginEmail, vetClinicName, vetClinicAddress, vetClinicPhone, vetClinicHrs;
-    private CircleImageView vetProfileImg;
+    private CircleImageView vet_profile_image;
     private Button backButton;
 
     @Override
@@ -48,11 +48,11 @@ public class VetProfileActivity extends AppCompatActivity {
         vetClinicPhone = findViewById(R.id.vetClinicPhone);
         vetClinicHrs = findViewById(R.id.vetClinicHrs);
 
-        vetProfileImg = findViewById(R.id.vetProfileImg);
+        vet_profile_image = findViewById(R.id.vet_profile_image);
         backButton = findViewById(R.id.backButton);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference()
-                .child("vets").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("vets")
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -61,9 +61,6 @@ public class VetProfileActivity extends AppCompatActivity {
                 if(snapshot.exists()){
                     String fullName = snapshot.child("fullName").getValue().toString();
                     vetFullName.setText(fullName);
-
-                    String email = snapshot.child("email").getValue().toString();
-                    vetLoginEmail.setText(email);
 
                     String clinicName = snapshot.child("clinicName").getValue().toString();
                     vetClinicName.setText(clinicName);
@@ -77,8 +74,12 @@ public class VetProfileActivity extends AppCompatActivity {
                     String clinicHrs = snapshot.child("clinicHrs").getValue().toString();
                     vetClinicHrs.setText(clinicHrs);
 
+                    String email = snapshot.child("email").getValue().toString();
+                    vetLoginEmail.setText(email);
 
-                    Glide.with(getApplicationContext()).load(snapshot.child("vetProfilePictureUrl").getValue().toString()).into(vetProfileImg);
+                    String imageUrl = snapshot.child("vetProfilePictureUrl").getValue().toString();
+                    Glide.with(getApplicationContext()).load(imageUrl).into(vet_profile_image);
+
 
                 }
 

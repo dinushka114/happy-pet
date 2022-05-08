@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.happypet.dao.Vet;
+import com.example.happypet.drivermanager.RegisterDriverActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -66,7 +68,19 @@ public class RegisterVetActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vet_register);
 
         backButton = findViewById(R.id.backButton);
-        vetRegisterNowBtn = findViewById(R.id.vetRegisterNowBtn);
+        vetRegisterNowBtn = (Button) findViewById(R.id.vetRegisterNowBtn);
+
+        vet_profile_image = findViewById(R.id.vet_profile_image);
+        vetFullName = findViewById(R.id.vetFullName);
+        vetClinicName = findViewById(R.id.vetClinicName);
+        vetClinicAddress = findViewById(R.id.vetClinicAddress);
+        vetClinicPhone = findViewById(R.id.vetClinicPhone);
+        vetClinicHrs = findViewById(R.id.vetClinicHrs);
+        vetLoginEmail = findViewById(R.id.vetLoginEmail);
+        vetLoginPassword = findViewById(R.id.vetLoginPassword);
+        loader = new ProgressDialog(this);
+
+        mAuth = FirebaseAuth.getInstance();
 
     //vet registration button
         vetRegisterNowBtn.setOnClickListener(new View.OnClickListener() {
@@ -118,12 +132,6 @@ public class RegisterVetActivity extends AppCompatActivity {
                     return;
                 }
 
-
-                if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-                    vetLoginEmail.setError("Email is not valid!!");
-                    return;
-                }
-
                 if(TextUtils.isEmpty(password)){
                     vetLoginPassword.setError("Password is required!");
                     return;
@@ -144,39 +152,31 @@ public class RegisterVetActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
-                            if(!task.isSuccessful()){
-                                String error = task.getException().toString();
-                                Toast.makeText(RegisterVetActivity.this, "Error" + error, Toast.LENGTH_SHORT).show();
-                            }
-                            else{
-                                String currentUserId = mAuth.getCurrentUser().getUid();
-                                userDatabaseRef = FirebaseDatabase.getInstance().getReference()
-                                        .child("vets").child(currentUserId);
-                                HashMap vetInfo = new HashMap();
-                                vetInfo.put("id", currentUserId);
-                                vetInfo.put("fullName", fullName);
-                                vetInfo.put("clinicName", clinicName);
-                                vetInfo.put("clinicAddress", clinicAddress);
-                                vetInfo.put("clinicPhone", clinicPhone);
-                                vetInfo.put("clinicHrs", clinicHrs);
-                                vetInfo.put("email", email);
-
-                                userDatabaseRef.updateChildren(vetInfo).addOnCompleteListener(new OnCompleteListener() {
+                            if(task.isSuccessful()){
+                                Vet vet = new Vet(fullName ,clinicName, clinicAddress, clinicPhone, clinicHrs , email, password);
+                                FirebaseDatabase.getInstance().getReference("vets")
+                                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                        .setValue(vet).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
-                                    public void onComplete(@NonNull Task task) {
+                                    public void onComplete(@NonNull Task<Void> task) {
                                         if(task.isSuccessful()){
-                                            Toast.makeText(RegisterVetActivity.this, "Vet Registration Successful!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RegisterVetActivity.this , "Vet Register successfully!!" , Toast.LENGTH_LONG).show();
+                                            System.out.println("SHARE");
                                         }else{
-                                            Toast.makeText(RegisterVetActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(RegisterVetActivity.this , "Vet Register Failed!!" , Toast.LENGTH_LONG).show();
                                         }
-
-                                        finish();
                                     }
                                 });
+                            }else{
+                                Toast.makeText(RegisterVetActivity.this , "Something went wrong" , Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
 
+                        //image upload
                                 if(resultUri !=null){
                                     final StorageReference filePath = FirebaseStorage.getInstance().getReference()
-                                            .child("vet profile images").child(currentUserId);
+                                            .child("vet profile images");
                                     Bitmap bitmap = null;
 
                                     try {
@@ -239,12 +239,12 @@ public class RegisterVetActivity extends AppCompatActivity {
                                 }
 
                             }
-                        }
-                    });
 
-                }
+                    }
 
-            }
+
+
+
         });
 
         //Go back to the login activity
@@ -256,17 +256,7 @@ public class RegisterVetActivity extends AppCompatActivity {
             }
         });
     //initialize variables
-        vet_profile_image = findViewById(R.id.vet_profile_image);
-        vetFullName = findViewById(R.id.vetFullName);
-        vetClinicName = findViewById(R.id.vetClinicName);
-        vetClinicAddress = findViewById(R.id.vetClinicAddress);
-        vetClinicPhone = findViewById(R.id.vetClinicPhone);
-        vetClinicHrs = findViewById(R.id.vetClinicHrs);
-        vetLoginEmail = findViewById(R.id.vetLoginEmail);
-        vetLoginPassword = findViewById(R.id.vetLoginPassword);
-        loader = new ProgressDialog(this);
 
-        mAuth = FirebaseAuth.getInstance();
 
 
         //pick a profile image from user gallery

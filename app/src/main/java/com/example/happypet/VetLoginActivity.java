@@ -85,15 +85,13 @@ public class VetLoginActivity extends AppCompatActivity {
                 if(TextUtils.isEmpty(email)){
                     vetLoginEmail.setError("Email is required!");
                 }
+
                 if (TextUtils.isEmpty(password)) {
 
                     vetLoginPassword.setError("Password is required!");
                 }
 
-                if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-                    vetLoginEmail.setError("Email is not valid!!");
-                    return;
-                }
+
 
                 else{
                         loader.setMessage("Login in progress..");

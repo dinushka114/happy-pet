@@ -20,7 +20,7 @@
 
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/vetProfileImg"
+        android:id="@+id/vet_profile_image"
         android:src="@drawable/person"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"

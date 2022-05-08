@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.happypet">
+    package="com.example.happypet" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:supportsRtl="true"
-            android:theme="@style/Theme.HappyPet">
-        <activity
-                android:name=".MainActivity"
-                android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HappyPet" >
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+        <activity
+            android:name=".drivermanager.DriverManagerHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PetOwnerHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterPetOwnerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PetOwnerLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".drivermanager.DriverDashBoard"
+            android:exported="false" />
+        <activity
+            android:name=".drivermanager.LoginDriver"
+            android:exported="false" />
+        <activity
+            android:name=".drivermanager.RegisterDriverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VetLoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegisterVetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VetDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

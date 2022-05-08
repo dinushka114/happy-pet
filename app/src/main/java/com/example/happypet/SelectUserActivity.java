@@ -48,7 +48,7 @@ public class SelectUserActivity extends AppCompatActivity {
         pet_owner_login_act_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectUserActivity.this, PetOwnerLoginActivity.class);
+                Intent intent = new Intent(SelectUserActivity.this, PetOwnerHomeActivity.class);
                 startActivity(intent);
             }
         });

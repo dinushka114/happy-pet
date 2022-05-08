@@ -58,10 +58,6 @@ public class RegisterVetActivity extends AppCompatActivity {
     private DatabaseReference userDatabaseRef;
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,8 +90,6 @@ public class RegisterVetActivity extends AppCompatActivity {
                 final String clinicHrs = vetClinicHrs.getText().toString().trim();
                 final String email = vetLoginEmail.getText().toString().trim();
                 final String password = vetLoginPassword.getText().toString().trim();
-
-
 
                 if(TextUtils.isEmpty(fullName)){
                     vetFullName.setError("Full name is required!");
@@ -141,7 +135,6 @@ public class RegisterVetActivity extends AppCompatActivity {
                     vetLoginPassword.setError("Password must be include minimum 6 characters");
                     return;
                 }
-
 
                else{
                     loader.setMessage("Registering you...");

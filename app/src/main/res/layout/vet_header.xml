@@ -2,23 +2,23 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:paddingTop="5dp"
+    android:paddingTop="30dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     android:layout_width="match_parent"
     android:background="@drawable/vet_header_background"
-    android:layout_height="210dp">
+    android:layout_height="230dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/vet_profile_image"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/person"
         android:layout_width="95dp"
         android:layout_height="95dp"/>
 
     <TextView
         android:id="@+id/vetFullName"
-        android:text="Full name"
+        android:text="Selena Gomez"
         android:textStyle="bold"
         android:textSize="18sp"
         android:textColor="#fff"
@@ -27,7 +27,7 @@
 
     <TextView
         android:id="@+id/vetLoginEmail"
-        android:text="example@gmail.com"
+        android:text="selena.g@gmail.com"
         android:textSize="16sp"
         android:textColor="#fff"
         android:layout_width="wrap_content"

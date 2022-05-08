@@ -7,12 +7,39 @@
     android:orientation="vertical"
     tools:context=".PetOwnerHomeActivity">
 
+    <VideoView
+        android:id="@+id/viewVideo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="610dp"
+        android:src="@drawable/img" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/frame_layout"/>
+        android:id="@+id/frame_layout">
+
+        <Button
+            android:id="@+id/nextActivity"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="100dp"
+            android:text="Get Start !"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </FrameLayout>
 
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
         android:layout_width="match_parent"

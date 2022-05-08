@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyPet">
         <activity
+            android:name=".newHomeFrangmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sliderItem_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".sliderItem"
+            android:exported="false" />
+        <activity
             android:name=".PetOwnerHomeActivity"
             android:exported="false" />
         <activity

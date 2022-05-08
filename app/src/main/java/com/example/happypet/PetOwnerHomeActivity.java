@@ -1,8 +1,12 @@
 package com.example.happypet;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.WindowManager;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
 public class PetOwnerHomeActivity extends AppCompatActivity {
@@ -91,7 +95,13 @@ public class PetOwnerHomeActivity extends AppCompatActivity {
         //replace fragment
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.frame_layout,fragment)
+                .replace(R.id.frame_layout, fragment)
                 .commit();
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        getWindow().setStatusBarColor(Color.TRANSPARENT);
+        setContentView(R.layout.activity_pet_owner_home);
+
     }
+
 }

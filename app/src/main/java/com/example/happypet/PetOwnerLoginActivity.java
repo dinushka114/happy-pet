@@ -67,7 +67,7 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
             }
         });
 
-        pet_ownerRegisterBtn.setOnClickListener(new View.OnClickListener() {
+        pet_ownerLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final String email = pet_ownerLoginEmail.getText().toString().trim();
@@ -118,6 +118,7 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
 

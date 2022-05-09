@@ -36,7 +36,11 @@ public class VetDashboardActivity extends AppCompatActivity implements Navigatio
     private CircleImageView vet_profile_image;
     private TextView vetFullName, vetLoginEmail;
 
-    private DatabaseReference userRef;
+    private DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("Vets").child(
+            FirebaseAuth.getInstance().getCurrentUser().getUid()
+    );
+
+    private FirebaseAuth mAuth;
 
 
 
@@ -53,6 +57,8 @@ public class VetDashboardActivity extends AppCompatActivity implements Navigatio
         vetDrawerLayout = findViewById(R.id.vetDrawerLayout);
         vetNav_view = findViewById(R.id.vetNav_view);
 
+        mAuth = FirebaseAuth.getInstance();
+
         vetNav_view.setNavigationItemSelectedListener(this);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(VetDashboardActivity.this, vetDrawerLayout,
@@ -63,10 +69,6 @@ public class VetDashboardActivity extends AppCompatActivity implements Navigatio
         vet_profile_image = vetNav_view.getHeaderView(0).findViewById(R.id.vet_profile_image);
         vetFullName = vetNav_view.getHeaderView(0).findViewById(R.id.vetFullName);
         vetLoginEmail = vetNav_view.getHeaderView(0).findViewById(R.id.vetLoginEmail);
-
-        userRef = FirebaseDatabase.getInstance().getReference("vets").child(
-                FirebaseAuth.getInstance().getCurrentUser().getUid()
-        );
 
         userRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -102,6 +104,8 @@ public class VetDashboardActivity extends AppCompatActivity implements Navigatio
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.vetProfile:
+
+
                 Intent intent =new Intent(VetDashboardActivity.this, VetProfileActivity.class);
                 startActivity(intent);
 

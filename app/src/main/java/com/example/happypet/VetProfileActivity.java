@@ -35,7 +35,7 @@ public class VetProfileActivity extends AppCompatActivity {
 
         vetToolBar = findViewById(R.id.vetToolBar);
         setSupportActionBar(vetToolBar);
-        getSupportActionBar().setTitle("My Profile");
+        getSupportActionBar().setTitle("MY VET PROFILE");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -51,7 +51,7 @@ public class VetProfileActivity extends AppCompatActivity {
         vet_profile_image = findViewById(R.id.vet_profile_image);
         backButton = findViewById(R.id.backButton);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("vets")
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Vets")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
         reference.addValueEventListener(new ValueEventListener() {
@@ -59,8 +59,12 @@ public class VetProfileActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 if(snapshot.exists()){
+
                     String fullName = snapshot.child("fullName").getValue().toString();
                     vetFullName.setText(fullName);
+
+                    String email = snapshot.child("email").getValue().toString();
+                    vetLoginEmail.setText(email);
 
                     String clinicName = snapshot.child("clinicName").getValue().toString();
                     vetClinicName.setText(clinicName);
@@ -74,8 +78,6 @@ public class VetProfileActivity extends AppCompatActivity {
                     String clinicHrs = snapshot.child("clinicHrs").getValue().toString();
                     vetClinicHrs.setText(clinicHrs);
 
-                    String email = snapshot.child("email").getValue().toString();
-                    vetLoginEmail.setText(email);
 
                     String imageUrl = snapshot.child("vetProfilePictureUrl").getValue().toString();
                     Glide.with(getApplicationContext()).load(imageUrl).into(vet_profile_image);

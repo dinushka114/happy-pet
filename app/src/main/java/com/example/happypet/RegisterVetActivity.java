@@ -60,11 +60,12 @@ public class RegisterVetActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vet_register);
 
         backButton = findViewById(R.id.backButton);
-        vetRegisterNowBtn = (Button) findViewById(R.id.vetRegisterNowBtn);
+        vetRegisterNowBtn = findViewById(R.id.vetRegisterNowBtn);
 
         vet_profile_image = findViewById(R.id.vet_profile_image);
         vetFullName = findViewById(R.id.vetFullName);
@@ -147,7 +148,7 @@ public class RegisterVetActivity extends AppCompatActivity {
 
                             if(task.isSuccessful()){
                                 Vet vet = new Vet(fullName ,clinicName, clinicAddress, clinicPhone, clinicHrs , email, password);
-                                FirebaseDatabase.getInstance().getReference("vets")
+                                FirebaseDatabase.getInstance().getReference("Vets")
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .setValue(vet).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
@@ -160,6 +161,7 @@ public class RegisterVetActivity extends AppCompatActivity {
                                         }
                                     }
                                 });
+
                             }else{
                                 Toast.makeText(RegisterVetActivity.this , "Something went wrong" , Toast.LENGTH_LONG).show();
                             }
@@ -248,8 +250,6 @@ public class RegisterVetActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    //initialize variables
-
 
 
         //pick a profile image from user gallery

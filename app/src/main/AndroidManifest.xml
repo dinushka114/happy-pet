@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.happypet" >
+    package="com.example.happypet">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -10,12 +10,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HappyPet" >
-
+        android:theme="@style/Theme.HappyPet">
+        <activity
+            android:name=".drivermanager.ManageVehicles"
+            android:exported="false" />
+        <activity
+            android:name=".drivermanager.AddVehicle"
+            android:exported="false" />
+        <activity
+            android:name=".drivermanager.ManageTrips"
+            android:exported="false" />
         <activity
             android:name=".VetProfileActivity"
             android:exported="false" />
-
         <activity
             android:name=".PetOwnerHomeActivity"
             android:exported="false" />
@@ -25,13 +32,11 @@
         <activity
             android:name=".PetOwnerLoginActivity"
             android:exported="false" />
-
         <activity
             android:name=".drivermanager.DriverDashBoard"
             android:exported="false" />
         <activity
             android:name=".drivermanager.LoginDriver"
-
             android:exported="false" />
         <activity
             android:name=".drivermanager.RegisterDriverActivity"
@@ -50,7 +55,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

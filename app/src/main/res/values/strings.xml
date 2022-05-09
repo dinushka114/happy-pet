@@ -29,8 +29,9 @@
     <string name="nic_hint">Enter NIC no</string>
     <string name="driver_nic">Enter NIC No</string>
     <string name="vehicle_no">Enter Vehicle No</string>
-    <string name="vehicle_color">Vehicle Color</string>
-    <string name="vehicle_type">Vehicle Type</string>
+    <string name="vehicle_model">Enter Vehicle Model</string>
+    <string name="vehicle_brand">Enter Vehicle Brand</string>
+    <string name="vehicle_color">Enter Vehicle Color</string>
 
 
     <string name="pet_owner_logo">pet owner logo</string>

@@ -6,7 +6,6 @@ public class Driver {
 
     }
 
-
     public Driver(String fullName , String email , String nic , String phone , String password){
             this.fullName = fullName;
             this.email = email;

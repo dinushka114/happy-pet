@@ -20,15 +20,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginDriver extends AppCompatActivity {
-
     private TextView driverRegisterBtn;
-
     private TextInputEditText driverLoginEmail,driverLoginPassword;
-
     private TextView driverForgetPassword;
-
     private Button driverLoginBtn;
-
     private FirebaseAuth mAuth;
 
     @Override

@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/soori/Desktop/Happy_Pet/app/src/main/res/drawable-v24/ic_category.xml" value="0.124" />
+        <entry key="..\:/Users/soori/Desktop/Happy_Pet/app/src/main/res/drawable-v24/ic_dob.xml" value="0.124" />
+        <entry key="..\:/Users/soori/Desktop/Happy_Pet/app/src/main/res/drawable-v24/ic_gender.xml" value="0.124" />
+        <entry key="..\:/Users/soori/Desktop/Happy_Pet/app/src/main/res/drawable-v24/ic_pet_breed.xml" value="0.124" />
+        <entry key="..\:/Users/soori/Desktop/Happy_Pet/app/src/main/res/drawable-v24/ic_pet_color.xml" value="0.124" />
+        <entry key="..\:/Users/soori/Desktop/Happy_Pet/app/src/main/res/drawable-v24/ic_pet_paw.xml" value="0.124" />
+        <entry key="..\:/Users/soori/Desktop/Happy_Pet/app/src/main/res/drawable-v24/ic_weight.xml" value="0.124" />
+        <entry key="..\:/Users/soori/Desktop/Happy_Pet/app/src/main/res/layout/activity_add_a_pet.xml" value="0.1" />
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/drawable/ic_vet.xml" value="0.1415" />
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/layout/activity_pet_owner_dash_board.xml" value="0.1160081053698075" />
         <entry key="..\:/Users/soori/Desktop/happy-pet/app/src/main/res/layout/activity_pet_owner_home.xml" value="0.2" />

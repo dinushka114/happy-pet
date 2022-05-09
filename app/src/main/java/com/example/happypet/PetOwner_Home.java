@@ -9,14 +9,14 @@ import androidx.fragment.app.Fragment;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
-public class PetOwnerHomeActivity extends AppCompatActivity {
+public class PetOwner_Home extends AppCompatActivity {
 
     MeowBottomNavigation bottomNavigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pet_owner_home);
+        setContentView(R.layout.petowner_activity_home);
 
         bottomNavigation = findViewById((R.id.bottom_navigation));
 
@@ -100,7 +100,7 @@ public class PetOwnerHomeActivity extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         getWindow().setStatusBarColor(Color.TRANSPARENT);
-        setContentView(R.layout.activity_pet_owner_home);
+        setContentView(R.layout.petowner_activity_home);
 
     }
 

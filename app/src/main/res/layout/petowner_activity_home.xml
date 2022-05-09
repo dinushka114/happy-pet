@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PetOwnerHomeActivity">
+    tools:context=".PetOwner_Home">
 
     <VideoView
         android:id="@+id/viewVideo"

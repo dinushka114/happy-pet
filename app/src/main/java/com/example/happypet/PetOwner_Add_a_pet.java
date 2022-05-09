@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Add_a_pet extends AppCompatActivity {
+public class PetOwner_Add_a_pet extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_a_pet);
+        setContentView(R.layout.petowner_activity_add_a_pet);
     }
 }

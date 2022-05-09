@@ -37,7 +37,7 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class RegisterPetOwnerActivity extends AppCompatActivity {
+public class PetOwner_Registration extends AppCompatActivity {
 
     private TextView backButton;
     private CircleImageView pet_owner_profile_image;
@@ -51,7 +51,7 @@ public class RegisterPetOwnerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_pet_owner);
+        setContentView(R.layout.petowner_activity_registration);
         backButton = findViewById(R.id.backButton);
         pet_ownerRegisterNowBtn = findViewById(R.id.pet_ownerRegisterNowBtn);
 
@@ -102,7 +102,7 @@ public class RegisterPetOwnerActivity extends AppCompatActivity {
 
                             if(!task.isSuccessful()){
                                 String error = task.getException().toString();
-                                Toast.makeText(RegisterPetOwnerActivity.this, "Error" + error, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PetOwner_Registration.this, "Error" + error, Toast.LENGTH_SHORT).show();
                             }
                             else{
                                 String currentUserId = mAuth.getCurrentUser().getUid();
@@ -120,9 +120,9 @@ public class RegisterPetOwnerActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task task) {
                                         if(task.isSuccessful()){
-                                            Toast.makeText(RegisterPetOwnerActivity.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(PetOwner_Registration.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
                                         }else{
-                                            Toast.makeText(RegisterPetOwnerActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(PetOwner_Registration.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                                         }
 
                                         finish();
@@ -148,7 +148,7 @@ public class RegisterPetOwnerActivity extends AppCompatActivity {
                                     uploadTask.addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(RegisterPetOwnerActivity.this, "Image upload failed!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(PetOwner_Registration.this, "Image upload failed!", Toast.LENGTH_SHORT).show();
                                         }
                                     });
 
@@ -170,9 +170,9 @@ public class RegisterPetOwnerActivity extends AppCompatActivity {
                                                             public void onComplete(@NonNull Task task) {
 
                                                                 if(task.isSuccessful()){
-                                                                    Toast.makeText(RegisterPetOwnerActivity.this, "Image added successful!", Toast.LENGTH_SHORT).show();
+                                                                    Toast.makeText(PetOwner_Registration.this, "Image added successful!", Toast.LENGTH_SHORT).show();
                                                                 }else{
-                                                                    Toast.makeText(RegisterPetOwnerActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                                                                    Toast.makeText(PetOwner_Registration.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                                                                 }
 
                                                             }
@@ -186,7 +186,7 @@ public class RegisterPetOwnerActivity extends AppCompatActivity {
                                         }
                                     });
 
-                                    Intent intent = new Intent(RegisterPetOwnerActivity.this, PetOwnerDashBoardActivity.class);
+                                    Intent intent = new Intent(PetOwner_Registration.this, PetOwner_Dash_Board.class);
                                     startActivity(intent);
                                     finish();
                                     loader.dismiss();
@@ -206,7 +206,7 @@ public class RegisterPetOwnerActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RegisterPetOwnerActivity.this, PetOwnerLoginActivity.class);
+                Intent intent = new Intent(PetOwner_Registration.this, PetOwner_Login.class);
                 startActivity(intent);
             }
         });

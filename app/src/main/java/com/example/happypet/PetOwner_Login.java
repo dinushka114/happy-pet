@@ -19,7 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class PetOwnerLoginActivity extends AppCompatActivity {
+public class PetOwner_Login extends AppCompatActivity {
 
     private TextView pet_ownerRegisterBtn;
     private TextInputEditText pet_ownerLoginEmail,pet_ownerLoginPassword;
@@ -33,7 +33,7 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pet_owner_login);
+        setContentView(R.layout.petowner_activity_login);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -42,7 +42,7 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser vets = mAuth.getCurrentUser();
                 if(vets !=null){
-                    Intent intent = new Intent(PetOwnerLoginActivity.this, PetOwnerDashBoardActivity.class);
+                    Intent intent = new Intent(PetOwner_Login.this, PetOwner_Dash_Board.class);
                     startActivity(intent);
                     finish();
                 }
@@ -62,7 +62,7 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(PetOwnerLoginActivity.this, RegisterPetOwnerActivity.class);
+                Intent intent = new Intent(PetOwner_Login.this, PetOwner_Registration.class);
                 startActivity(intent);
             }
         });
@@ -89,12 +89,12 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                Toast.makeText(PetOwnerLoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(PetOwnerLoginActivity.this, PetOwnerDashBoardActivity.class);
+                                Toast.makeText(PetOwner_Login.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(PetOwner_Login.this, PetOwner_Dash_Board.class);
                                 startActivity(intent);
                                 finish();
                             }else{
-                                Toast.makeText(PetOwnerLoginActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PetOwner_Login.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                             }
                             loader.dismiss();
                         }
@@ -106,7 +106,7 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
         pet_ownerRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PetOwnerLoginActivity.this, RegisterPetOwnerActivity.class);
+                Intent intent = new Intent(PetOwner_Login.this, PetOwner_Registration.class);
                 startActivity(intent);
             }
         });
@@ -114,7 +114,7 @@ public class PetOwnerLoginActivity extends AppCompatActivity {
         pet_ownerLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PetOwnerLoginActivity.this, PetOwnerHomeActivity.class);
+                Intent intent = new Intent(PetOwner_Login.this, PetOwner_Home.class);
                 startActivity(intent);
             }
         });

@@ -9,14 +9,14 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class PetOwnerDashBoardActivity extends AppCompatActivity {
+public class PetOwner_Dash_Board extends AppCompatActivity {
 
     private Button petownerLogOutBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pet_owner_dash_board);
+        setContentView(R.layout.petowner_activity_dash_board);
 
         petownerLogOutBtn = findViewById(R.id.petownerLogOutBtn);
 
@@ -24,7 +24,7 @@ public class PetOwnerDashBoardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(PetOwnerDashBoardActivity.this, PetOwnerLoginActivity.class);
+                Intent intent = new Intent(PetOwner_Dash_Board.this, PetOwner_Login.class);
                 startActivity(intent);
                 finish();
             }

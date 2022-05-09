@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyPet">
         <activity
-            android:name=".Add_a_pet"
+            android:name=".PetOwner_Add_a_pet"
             android:exported="false" />
         <activity
             android:name=".newHomeFrangmentActivity"
@@ -27,19 +27,19 @@
             android:name=".VetProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".PetOwnerHomeActivity"
+            android:name=".PetOwner_Home"
             android:exported="false" />
         <activity
-            android:name=".PetOwnerDashBoardActivity"
+            android:name=".PetOwner_Dash_Board"
             android:exported="false" />
         <activity
             android:name=".startActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterPetOwnerActivity"
+            android:name=".PetOwner_Registration"
             android:exported="false" />
         <activity
-            android:name=".PetOwnerLoginActivity"
+            android:name=".PetOwner_Login"
             android:exported="false" />
         <activity
             android:name=".drivermanager.DriverDashBoard"

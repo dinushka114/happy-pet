@@ -26,25 +26,20 @@
         <entry key="app/src/main/res/drawable/ic_mail.xml" value="0.272" />
         <entry key="app/src/main/res/drawable/ic_nic.xml" value="0.272" />
         <entry key="app/src/main/res/drawable/ic_password.xml" value="0.272" />
-        <entry key="app/src/main/res/drawable/ic_person.xml" value="0.234" />
         <entry key="app/src/main/res/drawable/ic_phone.xml" value="0.272" />
         <entry key="app/src/main/res/drawable/ic_profile.xml" value="0.272" />
         <entry key="app/src/main/res/drawable/ic_time.xml" value="0.272" />
         <entry key="app/src/main/res/drawable/ic_vehicle_no.xml" value="0.272" />
         <entry key="app/src/main/res/drawable/ic_vehicle_type.xml" value="0.272" />
         <entry key="app/src/main/res/layout/DriverManager/activity_register_driver.xml" value="0.1838905775075988" />
-        <entry key="app/src/main/res/layout/activity_add_vehicle.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_driver_dash_board.xml" value="0.38131699846860645" />
+        <entry key="app/src/main/res/layout/activity_add_vehicle.xml" value="0.12092391304347826" />
+        <entry key="app/src/main/res/layout/activity_driver_dash_board.xml" value="0.11803444782168186" />
         <entry key="app/src/main/res/layout/activity_login_driver.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_manage_vehicles.xml" value="0.22192028985507245" />
-        <entry key="app/src/main/res/layout/activity_pet_owner_home.xml" value="0.22760416666666666" />
         <entry key="app/src/main/res/layout/activity_register_driver.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_select_user.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.14814814814814814" />
         <entry key="app/src/main/res/layout/activity_vet_login.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_vet_profile.xml" value="0.1539855072463768" />
         <entry key="app/src/main/res/layout/activity_vet_register.xml" value="0.17274569402228976" />
-        <entry key="app/src/main/res/layout/fragment_drivers.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1838905775075988" />
       </map>
     </option>

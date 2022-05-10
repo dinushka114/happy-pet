@@ -134,4 +134,12 @@ public class PetOwner_Login extends AppCompatActivity {
         super.onStop();
         mAuth.removeAuthStateListener(authStateListener);
     }
+
+    public TextView getPet_ownerForgotPassword() {
+        return pet_ownerForgotPassword;
+    }
+
+    public void setPet_ownerForgotPassword(TextView pet_ownerForgotPassword) {
+        this.pet_ownerForgotPassword = pet_ownerForgotPassword;
+    }
 }

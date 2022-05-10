@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HappyPet">
         <activity
+            android:name=".PetOwner_Display_Pet_Details"
+            android:exported="false" />
+        <activity
+            android:name=".PetOwner_Delete_Pet_Details"
+            android:exported="false" />
+        <activity
+            android:name=".PetOwner_Update_Pet_Details"
+            android:exported="false" />
+        <activity
             android:name=".PetOwner_Add_a_pet"
             android:exported="false" />
         <activity

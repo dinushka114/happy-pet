@@ -1,22 +1,39 @@
 package com.example.happypet;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 
+import java.io.BufferedReader;
+
 public class PetOwner_Home extends AppCompatActivity {
 
     MeowBottomNavigation bottomNavigation;
+    VideoView videoView;
+    ImageView imageView;
+    Button button;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.petowner_activity_home);
+
+        button = findViewById(R.id.nextActivity);
+        videoView = findViewById(R.id.viewVideo);
+        imageView = findViewById(R.id.image);
+
 
         bottomNavigation = findViewById((R.id.bottom_navigation));
 
@@ -89,6 +106,10 @@ public class PetOwner_Home extends AppCompatActivity {
 
             }
         });
+
+
+
+
     }
 
     private void loadFragment(Fragment fragment) {
@@ -103,5 +124,7 @@ public class PetOwner_Home extends AppCompatActivity {
         setContentView(R.layout.petowner_activity_home);
 
     }
+
+
 
 }

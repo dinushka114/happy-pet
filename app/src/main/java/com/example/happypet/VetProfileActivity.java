@@ -24,7 +24,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class VetProfileActivity extends AppCompatActivity {
 
     private Toolbar vetToolBar;
-    private TextView  vetFullName, vetLoginEmail, vetClinicName, vetClinicAddress, vetClinicPhone, vetClinicHrs;
+    private TextView  fullName, email, clinicName, clinicAddress, clinicPhone, clinicHrs;
     private CircleImageView vet_profile_image;
     private Button backButton;
 
@@ -40,13 +40,12 @@ public class VetProfileActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
-
-        vetFullName = findViewById(R.id.vetFullName);
-        vetLoginEmail = findViewById(R.id.vetLoginEmail);
-        vetClinicName = findViewById(R.id.vetClinicName);
-        vetClinicAddress = findViewById(R.id.vetClinicAddress);
-        vetClinicPhone = findViewById(R.id.vetClinicPhone);
-        vetClinicHrs = findViewById(R.id.vetClinicHrs);
+        fullName = findViewById(R.id.fullName);
+        email = findViewById(R.id.email);
+        clinicName = findViewById(R.id.clinicName);
+        clinicAddress = findViewById(R.id.clinicAddress);
+        clinicPhone = findViewById(R.id.clinicPhone);
+        clinicHrs = findViewById(R.id.clinicHrs);
 
         vet_profile_image = findViewById(R.id.vet_profile_image);
         backButton = findViewById(R.id.backButton);
@@ -60,27 +59,19 @@ public class VetProfileActivity extends AppCompatActivity {
 
                 if(snapshot.exists()){
 
-                    String fullName = snapshot.child("fullName").getValue().toString();
-                    vetFullName.setText(fullName);
+                    fullName.setText(snapshot.child("fullName").getValue().toString());
 
-                    String email = snapshot.child("email").getValue().toString();
-                    vetLoginEmail.setText(email);
+                    email.setText(snapshot.child("email").getValue().toString());
 
-                    String clinicName = snapshot.child("clinicName").getValue().toString();
-                    vetClinicName.setText(clinicName);
+                    clinicName.setText(snapshot.child("clinicName").getValue().toString());
 
-                    String clinicAddress = snapshot.child("clinicAddress").getValue().toString();
-                    vetClinicAddress.setText(clinicAddress);
+                    clinicAddress.setText(snapshot.child("clinicAddress").getValue().toString());
 
-                    String clinicPhone = snapshot.child("clinicPhone").getValue().toString();
-                    vetClinicPhone.setText(clinicPhone);
+                    clinicPhone.setText(snapshot.child("clinicPhone").getValue().toString());
 
-                    String clinicHrs = snapshot.child("clinicHrs").getValue().toString();
-                    vetClinicHrs.setText(clinicHrs);
+                    clinicHrs.setText(snapshot.child("clinicHrs").getValue().toString());
 
-
-                    String imageUrl = snapshot.child("vetProfilePictureUrl").getValue().toString();
-                    Glide.with(getApplicationContext()).load(imageUrl).into(vet_profile_image);
+                    Glide.with(getApplicationContext()).load(snapshot.child("vetProfilePictureUrl").getValue().toString()).into(vet_profile_image);
 
 
                 }
@@ -115,8 +106,6 @@ public class VetProfileActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-
-
 
     }
 }

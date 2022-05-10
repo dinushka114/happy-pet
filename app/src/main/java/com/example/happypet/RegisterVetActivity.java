@@ -1,3 +1,5 @@
+//RegisterVetActivity
+
 package com.example.happypet;
 
 import androidx.annotation.NonNull;
@@ -79,7 +81,7 @@ public class RegisterVetActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-    //vet registration button
+        //vet registration button
         vetRegisterNowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -137,7 +139,7 @@ public class RegisterVetActivity extends AppCompatActivity {
                     return;
                 }
 
-               else{
+                else{
                     loader.setMessage("Registering you...");
                     loader.setCanceledOnTouchOutside(false);
                     loader.show();
@@ -148,15 +150,17 @@ public class RegisterVetActivity extends AppCompatActivity {
 
                             if(task.isSuccessful()){
                                 Vet vet = new Vet(fullName ,clinicName, clinicAddress, clinicPhone, clinicHrs , email, password);
-                                FirebaseDatabase.getInstance().getReference("Vets")
+                                FirebaseDatabase.getInstance().getReference("Vet")
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .setValue(vet).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if(task.isSuccessful()){
+
                                             Toast.makeText(RegisterVetActivity.this , "Vet Register successfully!!" , Toast.LENGTH_LONG).show();
-                                            System.out.println("SHARE");
+
                                         }else{
+
                                             Toast.makeText(RegisterVetActivity.this , "Vet Register Failed!!" , Toast.LENGTH_LONG).show();
                                         }
                                     }
@@ -168,76 +172,76 @@ public class RegisterVetActivity extends AppCompatActivity {
                         }
                     });
 
-                        //image upload
-                                if(resultUri !=null){
-                                    final StorageReference filePath = FirebaseStorage.getInstance().getReference()
-                                            .child("vet profile images");
-                                    Bitmap bitmap = null;
+                    //image upload
+                    if(resultUri !=null){
+                        final StorageReference filePath = FirebaseStorage.getInstance().getReference()
+                                .child("vet profile images");
+                        Bitmap bitmap = null;
 
-                                    try {
-                                        bitmap = MediaStore.Images.Media.getBitmap(getApplication().getContentResolver(), resultUri);
-                                    }catch (IOException e){
-                                        e.printStackTrace();
-                                    }
+                        try {
+                            bitmap = MediaStore.Images.Media.getBitmap(getApplication().getContentResolver(), resultUri);
+                        }catch (IOException e){
+                            e.printStackTrace();
+                        }
 
-                                    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                                    bitmap.compress(Bitmap.CompressFormat.JPEG, 20, byteArrayOutputStream);
-                                    byte[] data = byteArrayOutputStream.toByteArray();
-                                    UploadTask uploadTask = filePath.putBytes(data);
+                        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                        bitmap.compress(Bitmap.CompressFormat.JPEG, 20, byteArrayOutputStream);
+                        byte[] data = byteArrayOutputStream.toByteArray();
+                        UploadTask uploadTask = filePath.putBytes(data);
 
-                                    uploadTask.addOnFailureListener(new OnFailureListener() {
+                        uploadTask.addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(RegisterVetActivity.this, "Image upload failed!", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                        uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                            @Override
+                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                                if(taskSnapshot.getMetadata() !=null && taskSnapshot.getMetadata().getReference() !=null){
+                                    Task<Uri> result = taskSnapshot.getStorage().getDownloadUrl();
+                                    result.addOnSuccessListener(new OnSuccessListener<Uri>() {
                                         @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(RegisterVetActivity.this, "Image upload failed!", Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
+                                        public void onSuccess(Uri uri) {
+                                            String imageUrl = uri.toString();
+                                            Map newImageMap = new HashMap();
+                                            newImageMap.put("vetProfilePictureUrl", imageUrl);
 
-                                    uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                        @Override
-                                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                            userDatabaseRef.updateChildren(newImageMap).addOnCompleteListener(new OnCompleteListener() {
+                                                @Override
+                                                public void onComplete(@NonNull Task task) {
 
-                                            if(taskSnapshot.getMetadata() !=null && taskSnapshot.getMetadata().getReference() !=null){
-                                                Task<Uri> result = taskSnapshot.getStorage().getDownloadUrl();
-                                                result.addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                                    @Override
-                                                    public void onSuccess(Uri uri) {
-                                                        String imageUrl = uri.toString();
-                                                        Map newImageMap = new HashMap();
-                                                        newImageMap.put("vetProfilePictureUrl", imageUrl);
-
-                                                        userDatabaseRef.updateChildren(newImageMap).addOnCompleteListener(new OnCompleteListener() {
-                                                            @Override
-                                                            public void onComplete(@NonNull Task task) {
-
-                                                                if(task.isSuccessful()){
-                                                                    Toast.makeText(RegisterVetActivity.this, "Image added successful!", Toast.LENGTH_SHORT).show();
-                                                                }else{
-                                                                    Toast.makeText(RegisterVetActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
-                                                                }
-
-                                                            }
-                                                        });
-
-                                                        finish();
+                                                    if(task.isSuccessful()){
+                                                        Toast.makeText(RegisterVetActivity.this, "Image added successful!", Toast.LENGTH_SHORT).show();
+                                                    }else{
+                                                        Toast.makeText(RegisterVetActivity.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
                                                     }
-                                                });
-                                            }
 
+                                                }
+                                            });
+
+                                            finish();
                                         }
                                     });
-
-                                    Intent intent = new Intent(RegisterVetActivity.this, VetDashboardActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                    loader.dismiss();
-
                                 }
 
                             }
+                        });
+
+                        Intent intent = new Intent(RegisterVetActivity.this, VetDashboardActivity.class);
+                        startActivity(intent);
+                        finish();
+                        loader.dismiss();
+
+
 
                     }
 
+                }
 
+            }
 
 
         });

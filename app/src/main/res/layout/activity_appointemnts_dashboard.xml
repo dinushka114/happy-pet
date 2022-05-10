@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:orientation="vertical"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/appointImg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/pet_owner_logo"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#000"/>
+
+        <TextView
+            android:id="@+id/dateA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Date"
+            android:textSize="22sp"
+            android:textColor="#000"
+            android:layout_toRightOf="@id/appointImg"/>
+
+        <TextView
+            android:id="@+id/timeA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Time"
+            android:textSize="22sp"
+            android:textColor="#000"
+            android:layout_below="@id/dateA"
+            android:layout_toRightOf="@id/appointImg"/>
+
+        <TextView
+            android:id="@+id/petNameA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Pet name"
+            android:textSize="22sp"
+            android:textColor="#000"
+            android:layout_below="@id/timeA"
+            android:layout_toRightOf="@id/appointImg"/>
+
+        <TextView
+            android:id="@+id/petOwnerA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Pet owner"
+            android:textSize="22sp"
+            android:textColor="#000"
+            android:layout_below="@id/petNameA"
+            android:layout_toRightOf="@id/appointImg"/>
+
+        <TextView
+            android:id="@+id/petOwnerPhoneA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Pet owner phone"
+            android:textSize="22sp"
+            android:textColor="#000"
+            android:layout_below="@id/petOwnerA"
+            android:layout_toRightOf="@id/appointImg"/>
+
+        <TextView
+            android:id="@+id/reasonA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Reason"
+            android:textSize="22sp"
+            android:textColor="#000"
+            android:layout_below="@id/petOwnerPhoneA"
+            android:layout_toRightOf="@id/appointImg"/>
+
+        <LinearLayout
+            android:layout_below="@id/reasonA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/acceptBtn"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="Accept"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:layout_marginLeft="10dp"/>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
